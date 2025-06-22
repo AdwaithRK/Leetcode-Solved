@@ -16,8 +16,6 @@ public:
                     if(s[k] == s[i])
                     {
                         found_element = true;
-                        cout << "found at : " << k << "\n";
-                        cout << s[k] << " == " << s[i] << "\n";
                         for(int m = k; m < j; m++)
                         {
                             swap(s[m], s[m+1]);
@@ -30,7 +28,6 @@ public:
 
                 if(!found_element)
                 {
-                    cout << "\nelement not found : " << s[i] << "\n\n"; 
                     moves += (s.size()/2 - i);
                 }
                 
