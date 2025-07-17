@@ -23,11 +23,14 @@ public:
         
         int i = 0;
 
-        while(1){
-            if(i + 1 >= words.size()) break; 
-            if(isAnagram(words[i], words[i+1])){
+        while(i + 1 < words.size())
+        {
+            if(isAnagram(words[i], words[i+1]))
+            {
               words.erase(words.begin() + i + 1);  
-            }else{
+            }
+            else
+            {
                 i++;
             }
         }
