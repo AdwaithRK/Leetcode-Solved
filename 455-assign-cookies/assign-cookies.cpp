@@ -21,6 +21,6 @@ public:
             size_index++;
         }
         
-        return count;
+        return greed_index;
     }
 };
