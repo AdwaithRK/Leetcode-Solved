@@ -9,13 +9,11 @@ public:
 
         int greed_index = 0;
         int size_index = 0;
-        int count = 0;
 
         while(size_index < temp_size.size() && greed_index < temp_greed.size()){
 
             if(temp_size[size_index] >= temp_greed[greed_index]){
                 greed_index++;
-                count++;
             }
 
             size_index++;
