@@ -1,41 +1,37 @@
 class Solution {
-    bool isAnagram(string A, string B){
-        if(A.size() != B.size()) return false;
+    bool isAnagram(string word1, string word2){
 
-        int character[26] = {0};
+        if(word1.size() != word2.size()) return false;
+        
+        unordered_map<char, int> word_count;
+        int i = 0, j = 0;
 
-        for(int i = 0; i < A.size(); i++){
-            character[A[i] - 'a']++;
+        while(i < word1.size()){
+            word_count[word1[i++]]++;
         }
 
-        for(int i = 0; i < B.size(); i++){
-            if(character[B[i] - 'a'] > 0) {
-                character[B[i] - 'a']--;
+        while(j < word2.size()){
+            if(word_count[word2[j]] > 0){
+                word_count[word2[j++]]--;
             }
-            else return false;
+            else {
+                return false;
+            }
         }
 
         return true;
     }
-
 public:
     vector<string> removeAnagrams(vector<string>& words) {
-        
-        int i = 0;
+        vector<string> result_string = {words[0]};
 
-        while(i + 1 < words.size())
-        {
-            if(isAnagram(words[i], words[i+1]))
-            {
-              words.erase(words.begin() + i + 1);  
+        for(int i = 1; i < words.size(); i++){
+            if(isAnagram(words[i], words[i-1])){
+                continue;
             }
-            else
-            {
-                i++;
-            }
+            result_string.push_back(words[i]);
         }
-        
 
-        return words;
+        return result_string;
     }
 };
