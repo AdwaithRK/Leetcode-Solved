@@ -18,9 +18,7 @@ public:
         
         for(int i = 0; i < nums.size() - 2*k + 1 ; i++){
             bool first = isStrictlyIncreasing(nums, i, i + k - 1);
-            cout << "checking range : " << i << "," << i + k - 1 << "\n";
             bool second = isStrictlyIncreasing(nums, i + k, i + 2*k -1);
-            cout << "checking range : " << i + k << " , " << i + 2*k -1 << "\n";
             if(first && second) return true;
         }
 
