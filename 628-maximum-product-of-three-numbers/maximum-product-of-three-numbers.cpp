@@ -6,9 +6,9 @@ public:
         int num_size = nums.size();
 
         int window[4][3] = {
-            {0, 1, 2},
+           // {0, 1, 2},
             {num_size - 1, 0, 1},
-            {num_size - 2, num_size - 1, 0},
+           // {num_size - 2, num_size - 1, 0},
             {num_size - 3, num_size - 2, num_size - 1}
         };
 
