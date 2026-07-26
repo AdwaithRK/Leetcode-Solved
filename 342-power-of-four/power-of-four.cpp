@@ -14,7 +14,6 @@ public:
             if(n & 1){
                 if(n != 1) return false;
                 if(shift_count % 2 == 0) return true;
-                return false;
             }
         }
 
