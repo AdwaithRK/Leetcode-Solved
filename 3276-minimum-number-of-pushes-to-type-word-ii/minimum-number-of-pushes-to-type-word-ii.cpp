@@ -13,9 +13,7 @@ public:
         int ans = 0;
         for(int element: freq){
             count++;
-          //  cout << "element : " << element << "count : " << count << "\n";
             ans += element * ((count-1)/8 + 1);
-           // cout << element << " * " << (count / 8 ) + 1 << "\n";
         }        
 
         return ans;
