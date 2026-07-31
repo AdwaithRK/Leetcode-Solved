@@ -6,8 +6,6 @@ public:
         int ans = 0;
         while(n != 0) {
 
-            printf("%b \n", n);
-
             if(found_one)
                 count++;
             
