@@ -5,7 +5,7 @@ class Solution {
         for(int i = 2; i * i <= n; i++){
             if((n % i) == 0) return false;
         }
-      //  cout << n << "\n";
+        
         return true;
     }
 
@@ -14,7 +14,6 @@ public:
         int count = 0;
 
         for(int j = left; j <= right; j++){
-           // cout << "current element : " << j << "\n";
             int set_count = 0;
 
             int temp = j;
