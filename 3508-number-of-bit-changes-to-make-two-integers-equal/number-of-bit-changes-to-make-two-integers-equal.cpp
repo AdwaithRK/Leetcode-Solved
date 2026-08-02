@@ -6,8 +6,6 @@ public:
 
         int xorv = n ^ k;
 
-        printf("xor : %b \n", xorv);
-
         int pos = 0;
 
         while(xorv >> pos) {
